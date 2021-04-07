@@ -189,6 +189,11 @@ sudo cp path-file-host /var/lib/docker/aufs/mnt/FULL_CONTAINER_ID/PATH-NEW-FILE
 
 ou seja no nosso caso …
 
-sudo cp C:\Users\luisa\Desktop\Apresentacao.zip /var/lib/docker/aufs/mnt/** f917e44bf1fbe0cec3f44282d78af4db3cd65335d6d12df19302d26215517623**/root/file.txt
+Para arquivo Apresentacao...
+sudo cp C:\Users\luisa\Desktop\Apresentacao.zip /var/lib/docker/aufs/mnt/** f917e44bf1fbe0cec3f44282d78af4db3cd65335d6d12df19302d26215517623**/root/notebooks/tensorflow-for-poets-2/tf_files/Apresentacao.zip
+
+Para arquivo Teste...
+sudo cp C:\Users\luisa\Desktop\Teste.zip /var/lib/docker/aufs/mnt/** f917e44bf1fbe0cec3f44282d78af4db3cd65335d6d12df19302d26215517623**/root/notebooks/tensorflow-for-poets-2/tf_files/Teste.zip
+
 ```
 
