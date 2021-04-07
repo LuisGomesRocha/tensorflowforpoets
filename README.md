@@ -48,6 +48,8 @@ Antes de iniciar qualquer treinamento, você precisará de um conjunto de imagen
 
 Abrir seu cmd : Pressione Win+X para abrir o menu contextual e clique na opção Prompt de Comando ou Prompt de Comando (Admin).
 
+</p>
+
 ```
 docker run -it tensorflow/tensorflow:1.7.0 bash
 ```
@@ -64,19 +66,31 @@ Seu prompt deve ser "root @ xxxxxxx: / notebooks"
 git clone https://github.com/googlecodelabs/tensorflow-for-poets-2
 ```
 
-
 ```
 cd tensorflow-for-poets-2
+```
+
+```
+curl http://download.tensorflow.org/example_images/flower_photos.tgz \
+    | tar xz -C tf_files
 ```
 
 <p align="center"> :robot: Agora você deve ter uma cópia das fotos das flores. 
 Confirme o conteúdo do seu diretório de trabalho emitindo o seguinte comando: :robot: </p>
 
+```
+cd tf_files
+```
 
- ls tf_files / flower_photos
+```
+cd flower_photos
+```
+
+```
+dir
+```
 - [ ] Você deve receber: daisy/ dandelion/ roses/ sunflowers/ tulip/ LICENSE.txt
 
-:robot: </p>
 
 <p align="center"> :robot: (Re) treinamento da rede :robot: </p>
 
