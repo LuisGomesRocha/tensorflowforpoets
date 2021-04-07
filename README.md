@@ -27,6 +27,7 @@ Apenas um clique para baixar todas as imagens selecionadas nas páginas.
 Pode usar suas próprias regras para baixar a lista de imagens.
 Pode mudar o nome das imagens baixada  :robot: </p>
 
+
 <p align="center"> :robot: Instalar o Docker :robot: </p>
 
 <p align="justify"> :robot: 
@@ -45,12 +46,19 @@ Docker é um conjunto de produtos de plataforma como serviço que usam virtualiz
 
 Antes de iniciar qualquer treinamento, você precisará de um conjunto de imagens para ensinar a modelo sobre as novas classes que deseja reconhecer. Criamos um arquivo de fotos de flores licenciadas pela Creative Commons para uso inicial. Baixe as fotos (218 MB) invocando os dois comandos a seguir:
 
+Abrir seu cmd : Pressione Win+X para abrir o menu contextual e clique na opção Prompt de Comando ou Prompt de Comando (Admin).
+
 ```
 docker run -it tensorflow/tensorflow:1.7.0 bash
 ```
+
+Seu prompt deve ser "root @ xxxxxxx: / notebooks" 
+
 ```
 git clone https://github.com/googlecodelabs/tensorflow-for-poets-2
 ```
+
+
 ```
 cd tensorflow-for-poets-2
 ```
@@ -74,8 +82,9 @@ Comece seu retreinamento com um comando:
 
 - [ ] Usando Mobilenet Model: São uma classe de convolução de redes neurais projetadas por pesquisadores do Google
 
-<p align="justify"> 💻 python -m scripts.retrain  --bottleneck_dir=tf_files/bottlenecks  --how_many_training_steps 500 --model_dir=tf_files/models/mobilenet_0.50_224  --architecture=mobilenet_0.50_224  --summaries_dir=tf_files/training_summaries/mobilenet_0.50_224   --output_graph=tf_files/retrained_graph.pb --output_labels=tf_files/retrained_labels.txt --image_dir=tf_files/flower_photos/ 💻 </p>
-
+```
+python -m scripts.retrain  --bottleneck_dir=tf_files/bottlenecks  --how_many_training_steps 500 --model_dir=tf_files/models/mobilenet_0.50_224  --architecture=mobilenet_0.50_224  --summaries_dir=tf_files/training_summaries/mobilenet_0.50_224   --output_graph=tf_files/retrained_graph.pb --output_labels=tf_files/retrained_labels.txt --image_dir=tf_files/flower_photos/
+```
 
 - [ ] Usando Inception Model: É uma rede neural convolucional para auxiliar na análise de imagens e detecção de objetos , e começou como um módulo para Googlenet
 
