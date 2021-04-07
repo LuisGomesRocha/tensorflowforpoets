@@ -5,10 +5,6 @@
 </h1>
 <p align="center">🚀 Inteligência Artificial e Políticas Públicas Ambientais 🚀 </p>
 
-<h4 align="center"> 
-	🚧  Python  🚀 Em construção...  🚧
-</h4>
-
 ### Features
 
 - [x] Fatkun Batch Download da imagem
@@ -56,14 +52,13 @@ docker pull tensorflow / tensorflow: 1.7.0
 ```
 docker run -it tensorflow/tensorflow:1.7.0 bash
 ```
-
+Seu prompt deve ser "root @ xxxxxxx: / notebooks/tensorflow-for-poets-2" 
 ```
 apt-get update
 ```
 ```
 apt-get install git
 ```
-Seu prompt deve ser "root @ xxxxxxx: / notebooks/tensorflow-for-poets-2" 
 
 ```
 git clone https://github.com/googlecodelabs/tensorflow-for-poets-2
@@ -145,4 +140,56 @@ python -m scripts.label_image --graph=tf_files/retrained_graph.pb   --image=tf_f
 python -m scripts.label_image --input_height  299  --input_width  299 --input_layer "Mul" --graph=tf_files/retrained_graph.pb  --image=tf_files/flower_photos/daisy/2877860110_a842f8b14a_m.jpg
 ```
 
+
+<h4 align="center"> 
+	🚧  Python  🚀 Em construção...  🚧
+</h4>
+
+<p align="center"> :robot: Agora podemos (Re)treinar nossa rede com imagens que achamos interessantes classificar...:robot: </p>
+
+<p align="center"> :robot: Utilizando a extenção do Chrome Fatkun, busquei por fotos com “Ferrugem” (Puccinia sp ) e “Oidio” (Erysiphe difusa) nas folhas... perceba que nesse primeiro momento apenas busquei por imagem com a finalidade de montar um DataSet para treinar a rede neural... 9 IMPORTANTE que seu banco de imagens para serem analisadas sejam verificadas evitando divergência no treinamento).:robot: </p>
+ 
+<p align="center"> :robot: Salvei as fotos em duas pastas com seus respectivos nomes, e coloquei essas duas pastas com as fotos dentro de outra com o nome “Apresentacao”, e por fim compactei utilizando zip. Criei em seguida outra pasta com três fotos de exemplos de Ferrugem e Oídio, renomeadas como Teste 1, Teste n, Teste 6. Após o treinamento da nossa rede, utilizaremos essas fotos para verificar se o modelo está acertando...:robot: </p>
+
+<p align="center"> :robot: Esses arquivos ficaram no Desktop do meu pc, e possuem os seguintes nomes e caminhos: robot: </p>
+
+Nome|  Path (Caminho)  
+-----------  | -----------------------------------      
+Apresentacao.zip| C:\Users\luisa\Desktop\Apresentacao.zip
+Teste.zip| C:\Users\luisa\Desktop\Teste.zip
+
+<p align="center"> :robot:  Agora, abrindo um outro Command Prompt, digitamos o comando abaixo que irá nos fornecer o nome do container ou ID curto do container:: :robot: </p>
+
+```
+docker ps
+```
+
+CONTAINER ID |            IMAGE            | COMMAND | CREATED | STATUS |  PORTS  |         NAMES
+-----------  | --------------------------- | ------  |  ----   |  ----  | ------  | --------------------
+f917e44bf1fb | tensorflow/tensorflow:1.7.0 | "bash"  |  ...    |  ...   |6006/tcp | intelligent_heyrovsky
+
+
+<p align="center"> :robot:  Vamos precisar agora do ID completo do container preenchendo “SHORT_CONTAINER_ID “ no código abaixo :  :robot: </p>
+
+```
+docker inspect -f   '{{.Id}}'  SHORT_CONTAINER_ID-or-CONTAINER_NAME
+
+ou seja no nosso caso …
+
+docker inspect -f   '{{.Id}}'  f917e44bf1fb
+
+```
+
+Vamos receber:
+```
+'f917e44bf1fbe0cec3f44282d78af4db3cd65335d6d12df19302d26215517623'
+```
+
+```
+sudo cp path-file-host /var/lib/docker/aufs/mnt/FULL_CONTAINER_ID/PATH-NEW-FILE
+
+ou seja no nosso caso …
+
+sudo cp C:\Users\luisa\Desktop\Apresentacao.zip /var/lib/docker/aufs/mnt/** f917e44bf1fbe0cec3f44282d78af4db3cd65335d6d12df19302d26215517623**/root/file.txt
+```
 
