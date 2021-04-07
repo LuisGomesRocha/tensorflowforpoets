@@ -52,6 +52,12 @@ Abrir seu cmd : Pressione Win+X para abrir o menu contextual e clique na opção
 docker run -it tensorflow/tensorflow:1.7.0 bash
 ```
 
+```
+apt-get update
+```
+```
+apt-get install git
+```
 Seu prompt deve ser "root @ xxxxxxx: / notebooks" 
 
 ```
