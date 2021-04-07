@@ -69,8 +69,7 @@ cd tensorflow-for-poets-2
 ```
 
 ```
-curl http://download.tensorflow.org/example_images/flower_photos.tgz \
-    | tar xz -C tf_files
+curl http://download.tensorflow.org/example_images/flower_photos.tgz | tar xz -C tf_files
 ```
 
 <p align="center"> :robot: Agora você deve ter uma cópia das fotos das flores. 
