@@ -60,7 +60,7 @@ apt-get update
 ```
 apt-get install git
 ```
-Seu prompt deve ser "root @ xxxxxxx: / notebooks" 
+Seu prompt deve ser "root @ xxxxxxx: / notebooks/tensorflow-for-poets-2" 
 
 ```
 git clone https://github.com/googlecodelabs/tensorflow-for-poets-2
@@ -91,6 +91,15 @@ dir
 ```
 - [ ] Você deve receber: daisy/ dandelion/ roses/ sunflowers/ tulip/ LICENSE.txt
 
+Agora precisamos voltar para pasta "root @ xxxxxxx: / notebooks/tensorflow-for-poets-2" , então suba dois níveis digitando:
+
+```
+cd ..
+```
+
+```
+cd ..
+```
 
 <p align="center"> :robot: (Re) treinamento da rede :robot: </p>
 
