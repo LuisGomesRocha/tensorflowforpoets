@@ -133,7 +133,7 @@ python -m scripts.label_image --graph=tf_files/retrained_graph.pb   --image=tf_f
     
 ```
 
-- [ ] Se o treino foi utilizando Mobilenet Model:
+- [ ] Se o treino foi utilizando Inception:
 
 ```
 python -m scripts.label_image --input_height  299  --input_width  299 --input_layer "Mul" --graph=tf_files/retrained_graph.pb  --image=tf_files/flower_photos/daisy/2877860110_a842f8b14a_m.jpg
@@ -197,3 +197,15 @@ sudo cp C:\Users\luisa\Desktop\Teste.zip /var/lib/docker/aufs/mnt/** f917e44bf1f
 
 ```
 
+Para treinar o novo dataset com Ferrugem e Oídio:
+
+```
+python -m scripts.retrain  --bottleneck_dir=tf_files/bottlenecks  --how_many_training_steps 500 --model_dir=tf_files/models/mobilenet_0.50_224  --architecture=mobilenet_0.50_224  --summaries_dir=tf_files/training_summaries/mobilenet_0.50_224   --output_graph=tf_files/retrained_graph.pb --output_labels=tf_files/retrained_labels.txt --image_dir=Apresentacao/
+
+```
+Para testar o modelo:
+
+```
+python -m scripts.label_image --graph=tf_files/retrained_graph.pb   --image=Teste/Teste1.jpg
+
+```
