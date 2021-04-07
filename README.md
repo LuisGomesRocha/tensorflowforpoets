@@ -51,6 +51,9 @@ Abrir seu cmd : Pressione Win+X para abrir o menu contextual e clique na opção
 </p>
 
 ```
+docker pull tensorflow / tensorflow: 1.7.0
+```
+```
 docker run -it tensorflow/tensorflow:1.7.0 bash
 ```
 
